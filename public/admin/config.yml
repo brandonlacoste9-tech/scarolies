@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: public
+public_folder: /
+collections:
+  - name: ops
+    label: Desk (alert + analytics)
+    files:
+      - label: Alert bar
+        name: ops
+        file: src/content/ops.json
+        fields:
+          - label: Alert
+            name: alert
+            widget: object
+            fields:
+              - { label: Show alert, name: enabled, widget: boolean }
+              - { label: English, name: en, widget: text }
+              - { label: Français, name: fr, widget: text }
+          - label: Analytics
+            name: analytics
+            widget: object
+            fields:
+              - { label: GoatCounter site code, name: goatcounter, widget: string, required: false }

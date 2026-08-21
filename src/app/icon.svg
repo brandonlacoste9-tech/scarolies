@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Santé Kildare">
+  <rect width="32" height="32" fill="#163a5c"/>
+  <circle cx="16" cy="14" r="7" fill="#4aa3c7"/>
+  <circle cx="16" cy="14" r="3" fill="#163a5c"/>
+  <rect y="24" width="32" height="8" fill="#1f7eb0"/>
+</svg>

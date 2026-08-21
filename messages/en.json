@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "site": "Scarolie's Pasta Emporium",
+    "description": "Italian restaurant in Pointe-Claire. Pasta, pizza, grill, and fish. 950 St-Jean Blvd. Reserve on TB Dine or call (514) 694-8611."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "locations": "Hours",
+    "menu": "Menu",
+    "takeaway": "Family plates",
+    "clinic": "About",
+    "contact": "Contact",
+    "call": "Call",
+    "book": "Reserve",
+    "menuPdf": "Wine list",
+    "close": "Close"
+  },
+  "home": {
+    "kicker": "Pointe-Claire · Italian",
+    "title": "Scarolie's",
+    "lead": "Pasta emporium on St-Jean. A table through TB Dine, or call (514) 694-8611.",
+    "heroAlt": "Rack of lamb with rosemary, grilled vegetables, and sauce.",
+    "ctaCall": "Reserve a table",
+    "ctaBook": "Hours",
+    "ctaMenu": "The menu",
+    "ctaForm": "Family plates",
+    "tileHours": "Hours",
+    "tileHoursSub": "Pointe-Claire",
+    "tileCall": "A table",
+    "tileCallSub": "TB Dine or phone",
+    "tileServices": "Menu",
+    "tileServicesSub": "Pasta to grill",
+    "tileContact": "Family plates",
+    "tileContactSub": "Takeaway for 4",
+    "strip": "Reserve on TB Dine · (514) 694-8611 · Pointe-Claire",
+    "bookTitle": "A table, or a plate to go",
+    "bookLead": "Online reservations go through TB Dine. Family takeaway plates are for four — call the restaurant.",
+    "svcKicker": "the house",
+    "svcTitle": "From the card",
+    "svcLead": "Pasta, antipasto, chicken and veal, pizza, grill, fish, baked pasta. Lunch includes soup of the day. Tax extra. Prices may change.",
+    "svcMore": "Full menu",
+    "placeKicker": "one room",
+    "placeTitle": "950 St-Jean, Pointe-Claire",
+    "placeLead": "Italian cooking, patio, free parking. Monday–Thursday 11:00–21:00, Friday–Saturday until 22:00, Sunday 11:00–21:00.",
+    "placeMap": "Hours and map",
+    "hoursTitle": "Hours",
+    "aboutTitle": "Pasta, family, a table",
+    "aboutLead": "Scarolie's is known for Italian cooking and a warm room — classic recipes, house plates, and a wine list. Intimate dinners, groups, and business tables.",
+    "aboutCta": "About"
+  },
+  "locations": {
+    "kicker": "Pointe-Claire",
+    "title": "Hours",
+    "lead": "One restaurant. 950 St-Jean Blvd., Pointe-Claire, QC H9R 5N8.",
+    "phoneHours": "Reservations",
+    "visit": "Hours",
+    "note": "Reserve on TB Dine or call (514) 694-8611. Email: scarolies@yahoo.ca.",
+    "maps": "Map"
+  },
+  "appointments": {
+    "title": "A table",
+    "lead": "Online reservations go through TB Dine, the booker on their live site. You can also call. Email is for messages — it does not take tables.",
+    "hoursNote": "Monday–Thursday 11:00–21:00. Friday–Saturday 11:00–22:00. Sunday 11:00–21:00.",
+    "emailNote": "Questions: scarolies@yahoo.ca. Tables: TB Dine or (514) 694-8611.",
+    "urgentLead": "Walk-in is possible; a reservation on TB Dine or a call is the sure way."
+  },
+  "clinic": {
+    "kicker": "the house",
+    "title": "About",
+    "lead": "Scarolie's is known for its Italian cooking and a warm room. Traditional recipes, house specialties, desserts, and a wine list.",
+    "tech": "The room suits a dinner for two, a group, or a business table. Patio, free parking, wheelchair access. Visa, Mastercard, Interac.",
+    "techCaption": "Rack of lamb at Scarolie's.",
+    "locationCta": "Hours"
+  },
+  "contact": {
+    "kicker": "Pointe-Claire",
+    "title": "Contact",
+    "emailTitle": "Email",
+    "emailNote": "scarolies@yahoo.ca is published on their site. It does not take table reservations — use TB Dine or the phone. Their VIP list lives on the live site.",
+    "map": "Map",
+    "bookCta": "Reserve a table"
+  },
+  "chat": {
+    "open": "Ask the maître d’",
+    "title": "Scarolie's",
+    "status": "Your maître d’ — menu, hours, and tables.",
+    "close": "Close",
+    "placeholder": "Type your question…",
+    "placeholderReason": "Tonight?",
+    "placeholderAttached": "How many?",
+    "book": "Reserve",
+    "bookPrompt": "I want a table",
+    "send": "Send",
+    "mic": "Speak",
+    "listening": "Listening…",
+    "emailNote": "Email"
+  },
+  "footer": {
+    "line": "Italian · Pointe-Claire · pasta, pizza, grill"
+  },
+  "hours": {
+    "banner": "Mon–Thu 11:00–21:00 · Fri–Sat until 22:00 · Sun 11:00–21:00 · (514) 694-8611"
+  },
+  "services": {
+    "kicker": "the house",
+    "title": "Menu",
+    "lead": "Dinner, lunch (soup of the day included), family plates for four, and $13 martinis. Wine list as a PDF. Tax extra. Prices may change without notice.",
+    "book": "Reserve",
+    "pdf": "Wine list (PDF)",
+    "pdfNote": "Wine prices are on their PDF, not invented here.",
+    "tax": "Prices exclude taxes and are subject to change without notice."
+  },
+  "walkin": {
+    "kicker": "takeaway for 4",
+    "title": "Family plates",
+    "lead": "Takeaway plates for four people — lasagna, cacciatore, salmon, tortellini, penne arrosto, bolognese, Calabrese chicken, mixed grill, pork chops, chicken parmigiano. Call (514) 694-8611. Prices may change.",
+    "hours": "Pickup during opening hours. There is no separate online store on their site.",
+    "hoursConflict": "Ask the restaurant which plates are available today.",
+    "phoneOption": "(514) 694-8611",
+    "listTitle": "On the family card",
+    "item1": "Portions for 4",
+    "item2": "Call to order",
+    "item3": "Pickup during published hours",
+    "item4": "Prices on the menu page",
+    "familyTitle": "Order",
+    "formCta": "See the plates",
+    "familyLead": "We do not take family orders by web form. Call the restaurant.",
+    "urgent": "Dinner takeout is also on the main menu.",
+    "back": "Hours",
+    "contact": "Contact"
+  }
+}

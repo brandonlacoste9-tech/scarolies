@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "site": "Scarolie's Pasta Emporium",
+    "description": "Restaurant italien à Pointe-Claire. Pâtes, pizza, grillades et poisson. 950, boul. Saint-Jean. Réservez sur TB Dine ou au (514) 694-8611."
+  },
+  "nav": {
+    "skip": "Aller au contenu",
+    "locations": "Heures",
+    "menu": "Menu",
+    "takeaway": "Repas familial",
+    "clinic": "À propos",
+    "contact": "Contact",
+    "call": "Appeler",
+    "book": "Réserver",
+    "menuPdf": "Carte des vins",
+    "close": "Fermer"
+  },
+  "home": {
+    "kicker": "Pointe-Claire · Italien",
+    "title": "Scarolie's",
+    "lead": "Pasta emporium sur Saint-Jean. Une table sur TB Dine, ou au (514) 694-8611.",
+    "heroAlt": "Carré d’agneau, romarin, légumes grillés et sauce.",
+    "ctaCall": "Réserver une table",
+    "ctaBook": "Heures",
+    "ctaMenu": "Le menu",
+    "ctaForm": "Repas familial",
+    "tileHours": "Heures",
+    "tileHoursSub": "Pointe-Claire",
+    "tileCall": "Une table",
+    "tileCallSub": "TB Dine ou téléphone",
+    "tileServices": "Menu",
+    "tileServicesSub": "Des pâtes au grill",
+    "tileContact": "Repas familial",
+    "tileContactSub": "Pour 4 personnes",
+    "strip": "Réservez sur TB Dine · (514) 694-8611 · Pointe-Claire",
+    "bookTitle": "Une table, ou une assiette à emporter",
+    "bookLead": "Les réservations en ligne passent par TB Dine. Les assiettes familiales sont pour quatre — téléphonez au restaurant.",
+    "svcKicker": "la maison",
+    "svcTitle": "Sur la carte",
+    "svcLead": "Pâtes, antipasto, poulet et veau, pizza, grillades, poisson, pâtes au four. Le midi, soupe du jour incluse. Taxes en sus. Prix sujets à changement.",
+    "svcMore": "Le menu",
+    "placeKicker": "une salle",
+    "placeTitle": "950, Saint-Jean, Pointe-Claire",
+    "placeLead": "Cuisine italienne, patio, stationnement gratuit. Lundi au jeudi 11 h – 21 h, vendredi et samedi jusqu’à 22 h, dimanche 11 h – 21 h.",
+    "placeMap": "Heures et carte",
+    "hoursTitle": "Heures",
+    "aboutTitle": "Pâtes, famille, une table",
+    "aboutLead": "Scarolie's est reconnu pour sa cuisine italienne et une salle chaleureuse — recettes classiques, spécialités de la maison, et une carte des vins. Souper intime, groupe, ou repas d’affaires.",
+    "aboutCta": "À propos"
+  },
+  "locations": {
+    "kicker": "Pointe-Claire",
+    "title": "Heures",
+    "lead": "Un restaurant. 950, boul. Saint-Jean, Pointe-Claire, QC H9R 5N8.",
+    "phoneHours": "Réservations",
+    "visit": "Heures",
+    "note": "Réservez sur TB Dine ou au (514) 694-8611. Courriel : scarolies@yahoo.ca.",
+    "maps": "Carte"
+  },
+  "appointments": {
+    "title": "Une table",
+    "lead": "Les réservations en ligne passent par TB Dine, l’outil sur leur site. Vous pouvez aussi téléphoner. Le courriel sert aux messages — il ne prend pas les tables.",
+    "hoursNote": "Lundi au jeudi 11 h – 21 h. Vendredi et samedi 11 h – 22 h. Dimanche 11 h – 21 h.",
+    "emailNote": "Questions : scarolies@yahoo.ca. Tables : TB Dine ou (514) 694-8611.",
+    "urgentLead": "Sans réservation, c’est possible ; TB Dine ou un appel reste le plus sûr."
+  },
+  "clinic": {
+    "kicker": "la maison",
+    "title": "À propos",
+    "lead": "Scarolie's est reconnu pour sa fine cuisine et l’ambiance italienne. Recettes classiques, spécialités de la maison, desserts, et une grande sélection de vins.",
+    "tech": "La salle convient à un souper à deux, un groupe, ou un repas d’affaires. Patio, stationnement gratuit, accessible aux fauteuils. Visa, Mastercard, Interac.",
+    "techCaption": "Carré d’agneau chez Scarolie's.",
+    "locationCta": "Heures"
+  },
+  "contact": {
+    "kicker": "Pointe-Claire",
+    "title": "Contact",
+    "emailTitle": "Courriel",
+    "emailNote": "scarolies@yahoo.ca est publié sur leur site. Il ne prend pas les réservations de table — utilisez TB Dine ou le téléphone. La liste VIP est sur leur site actuel.",
+    "map": "Carte",
+    "bookCta": "Réserver une table"
+  },
+  "chat": {
+    "open": "Demander au maître d’",
+    "title": "Scarolie's",
+    "status": "Votre maître d’ — menu, heures et tables.",
+    "close": "Fermer",
+    "placeholder": "Écrivez votre question…",
+    "placeholderReason": "Ce soir ?",
+    "placeholderAttached": "Combien ?",
+    "book": "Réserver",
+    "bookPrompt": "Je veux une table",
+    "send": "Envoyer",
+    "mic": "Parler",
+    "listening": "Écoute…",
+    "emailNote": "Courriel"
+  },
+  "footer": {
+    "line": "Italien · Pointe-Claire · pâtes, pizza, grillades"
+  },
+  "hours": {
+    "banner": "Lun–jeu 11 h – 21 h · ven–sam jusqu’à 22 h · dim 11 h – 21 h · (514) 694-8611"
+  },
+  "services": {
+    "kicker": "la maison",
+    "title": "Menu",
+    "lead": "Souper, midi (soupe du jour incluse), repas familial pour quatre, et martinis 13 $. Carte des vins en PDF. Taxes en sus. Prix sujets à changement sans préavis.",
+    "book": "Réserver",
+    "pdf": "Carte des vins (PDF)",
+    "pdfNote": "Les prix des vins sont sur leur PDF, pas inventés ici.",
+    "tax": "Les prix excluent les taxes et sont sujets à changement sans préavis."
+  },
+  "walkin": {
+    "kicker": "pour 4 personnes",
+    "title": "Repas familial",
+    "lead": "Assiettes à emporter pour quatre — lasagne, cacciatore, saumon, tortellini, penne arrosto, bolognaise, poulet Calabrese, grillade mixte, côtelettes, poulet parmigiano. Téléphonez au (514) 694-8611. Prix sujets à changement.",
+    "hours": "Cueillette pendant les heures d’ouverture. Pas de boutique en ligne séparée sur leur site.",
+    "hoursConflict": "Demandez au restaurant quelles assiettes sont disponibles aujourd’hui.",
+    "phoneOption": "(514) 694-8611",
+    "listTitle": "Sur la carte familiale",
+    "item1": "Portions pour 4",
+    "item2": "Commandez par téléphone",
+    "item3": "Cueillette pendant les heures publiées",
+    "item4": "Prix sur la page menu",
+    "familyTitle": "Commander",
+    "formCta": "Voir les assiettes",
+    "familyLead": "Nous ne prenons pas les commandes familiales par formulaire web. Téléphonez au restaurant.",
+    "urgent": "Le menu du soir se prend aussi pour emporter.",
+    "back": "Heures",
+    "contact": "Contact"
+  }
+}

@@ -1,0 +1,1078 @@
+[
+  {
+    "slug": "menu",
+    "name": "Menu (Take out menu)",
+    "sections": [
+      {
+        "title": "Pasta",
+        "items": [
+          {
+            "title": "Spaghettini Napolitana",
+            "prices": [
+              {
+                "label": "",
+                "price": "21.95"
+              }
+            ],
+            "body": "Spagettini pasta tossed with our homemade tomato sauce"
+          },
+          {
+            "title": "Spaghetti Bolognese",
+            "prices": [
+              {
+                "label": "",
+                "price": "24.75"
+              },
+              {
+                "label": "extra Meatballs",
+                "price": "6.95"
+              }
+            ],
+            "body": "Spaghettini pasta tossed with our homemade meat sauce"
+          },
+          {
+            "title": "Penne Arrabiata",
+            "prices": [
+              {
+                "label": "",
+                "price": "23.75"
+              }
+            ],
+            "body": "Penne pasta sautéed with our homemade spicey tomato sauce"
+          },
+          {
+            "title": "Linguini Primavera",
+            "prices": [
+              {
+                "label": "",
+                "price": "27.45"
+              }
+            ],
+            "body": "Linguini pasta in a rosé sauce with fresh seasonal vegetables, white wine and garlic"
+          },
+          {
+            "title": "Fettuccini Alfredo",
+            "prices": [
+              {
+                "label": "",
+                "price": "25.95"
+              }
+            ],
+            "body": "Fettucine pasta with alfredo sauce and parmesan cheese"
+          },
+          {
+            "title": "Spaghetti Carbonara",
+            "prices": [
+              {
+                "label": "",
+                "price": "27.25"
+              }
+            ],
+            "body": "Spaghetti with cream, panchetta, parmesan cheese, egg yolks and black peppercorns"
+          },
+          {
+            "title": "Spaghetti Aglio & Olio",
+            "prices": [
+              {
+                "label": "",
+                "price": "19.95"
+              }
+            ],
+            "body": "Extra virgin olive oil, garlic, basil & white wine"
+          },
+          {
+            "title": "Penne Romanoff",
+            "prices": [
+              {
+                "label": "",
+                "price": "25.95"
+              }
+            ],
+            "body": "Penne pasta in a rosé sauce, with vodka, crushed black pepper, mushrooms and shallots"
+          },
+          {
+            "title": "Penne Gigi",
+            "prices": [
+              {
+                "label": "",
+                "price": "26.45"
+              }
+            ],
+            "body": "Penne pasta in a rosé sauce, with proscuitto, mushrooms and shallots"
+          },
+          {
+            "title": "Tortellini alla Rosa",
+            "prices": [
+              {
+                "label": "",
+                "price": "26.45"
+              }
+            ],
+            "body": "Tortellini stuffed with ricotta cheese sautéed in a rosé sauce with parmesan cheese"
+          },
+          {
+            "title": "Gnochi Gorgonzola e Spinaci",
+            "prices": [
+              {
+                "label": "",
+                "price": "26.25"
+              }
+            ],
+            "body": "Gnochi pasta in a creamy gorgonzola cheese sauce with spinach"
+          },
+          {
+            "title": "Fettuccini Giorgio",
+            "prices": [
+              {
+                "label": "",
+                "price": "27.95"
+              }
+            ],
+            "body": "Fettucine pasta in a tomato sauce with spinach, mushrooms, red bell peppers, brie and goat cheese"
+          },
+          {
+            "title": "Fettuccini alla Giovanni",
+            "prices": [
+              {
+                "label": "",
+                "price": "28.45"
+              }
+            ],
+            "body": "Cream, Brandy, shallots, ground pepper, portobello mushrooms, pesto, pancetta ( Italian bacon ), sundried tomatoes and Kalamata black olives"
+          },
+          {
+            "title": "Fettuccini al Pollo e Funghi",
+            "prices": [
+              {
+                "label": "",
+                "price": "29.25"
+              }
+            ],
+            "body": "Sautéed chicken breast with cream, pesto, portobello mushrooms, sundried tomatoes and white wine"
+          },
+          {
+            "title": "Penne Arrosto",
+            "prices": [
+              {
+                "label": "",
+                "price": "26.45"
+              }
+            ],
+            "body": "Grilled Italian sausage, tomato sauce, garlic, pesto, red peppers, shallots and white wine"
+          },
+          {
+            "title": "Spaghetti Cacciatore",
+            "prices": [
+              {
+                "label": "",
+                "price": "28.95"
+              }
+            ],
+            "body": "Spaghetti in a tomato sauce with sautéed chicken, garlic, grilled peppers, shallots, mushrooms, pesto, onions, fresh basil, oregano, white wine and Kalamata olives"
+          },
+          {
+            "title": "Linguini Porcini Spinacci",
+            "prices": [
+              {
+                "label": "",
+                "price": "27.45"
+              }
+            ],
+            "body": "Porcini mushrooms, cream and pesto, sundried tomatoes, garlic, spinach, basil and bocconcini cheese"
+          },
+          {
+            "title": "Capelli di Angelo alla Diablo",
+            "prices": [
+              {
+                "label": "",
+                "price": "32.95"
+              }
+            ],
+            "body": "Angel hair pasta in arrabiata sauce with shrimps, mushrooms and shallots"
+          },
+          {
+            "title": "Capelli di Angelo gamberi Funghi",
+            "prices": [
+              {
+                "label": "",
+                "price": "32.95"
+              }
+            ],
+            "body": "Angel hair pasta in a creamy pesto sauce with shrimps, porcini mushrooms, garlic, white wine and olive oil"
+          },
+          {
+            "title": "Tortellini con Portobello",
+            "prices": [
+              {
+                "label": "",
+                "price": "26.25"
+              }
+            ],
+            "body": "Tortellini stuffed with cheese, in a cream sauce with white wine, portobello mushrooms & parmesan cheese"
+          },
+          {
+            "title": "Capelli con Pesto di Pomodori e Portobello",
+            "prices": [
+              {
+                "label": "",
+                "price": "27.45"
+              }
+            ],
+            "body": "Angel hair pasta in a creamy pesto sauce with broccoli, portebello mushrooms, sundried tomato,white wine, romano cheese, topped with roasted pine nuts"
+          },
+          {
+            "title": "Linguini Vongole Marinara or White Wine",
+            "prices": [
+              {
+                "label": "",
+                "price": "27.45"
+              }
+            ],
+            "body": "Linguini with marinara sauce,baby clams, garlic, shallots, white wine / or white wine & garlic"
+          },
+          {
+            "title": "Penne al Salmone",
+            "prices": [
+              {
+                "label": "",
+                "price": "27.75"
+              }
+            ],
+            "body": "Smoked salmon, cream, tomato sauce, black peppercorns, vodka and shallots"
+          },
+          {
+            "title": "Ravioli d'Aragosta",
+            "prices": [
+              {
+                "label": "",
+                "price": "31.45"
+              }
+            ],
+            "body": "Ravioli pasta stuffed with lobster in a rosé sauce with sundried tomatos, garlic, brandy and green Madagascar peppercorns"
+          },
+          {
+            "title": "Linguini Pescatore",
+            "prices": [
+              {
+                "label": "",
+                "price": "34.45"
+              }
+            ],
+            "body": "Linguini pasta in a tomato sauce with white wine and a mix of seafood"
+          },
+          {
+            "title": "Fettuccini Scalope",
+            "prices": [
+              {
+                "label": "",
+                "price": "32.95"
+              }
+            ],
+            "body": "Fettucine pasta in a rosé sauce with scallops, sundried tomatos, garlic, brandy and portebello mushrooms"
+          },
+          {
+            "title": "Linguini con Gamberetti alla Brandy Rosa",
+            "prices": [
+              {
+                "label": "",
+                "price": "33.95"
+              }
+            ],
+            "body": "Linguini pasta sautéed in a creamy tomato lobster brandy sauce, with jumbo shrimp seared in extra virgin olive oil, with roasted red peppers, portobello mushrooms, asparagus and shallots."
+          },
+          {
+            "title": "* gluten-free pasta",
+            "prices": [
+              {
+                "label": "",
+                "price": "3.95"
+              }
+            ],
+            "body": "penne"
+          }
+        ]
+      },
+      {
+        "title": "Antipasto",
+        "items": [
+          {
+            "title": "Calamari Fritti",
+            "prices": [
+              {
+                "label": "",
+                "price": "23.95"
+              }
+            ],
+            "body": ""
+          },
+          {
+            "title": "Meatballs",
+            "prices": [
+              {
+                "label": "",
+                "price": "10.45"
+              }
+            ],
+            "body": ""
+          },
+          {
+            "title": "Shrimp Cocktail",
+            "prices": [
+              {
+                "label": "",
+                "price": "22.75"
+              }
+            ],
+            "body": ""
+          },
+          {
+            "title": "Grilled Italian Sausage",
+            "prices": [
+              {
+                "label": "",
+                "price": "15.45"
+              }
+            ],
+            "body": ""
+          },
+          {
+            "title": "Portobello Mushrooms & Red Pepper",
+            "prices": [
+              {
+                "label": "",
+                "price": "16.45"
+              }
+            ],
+            "body": ""
+          },
+          {
+            "title": "Zucchini Fritti",
+            "prices": [
+              {
+                "label": "",
+                "price": "18.95"
+              }
+            ],
+            "body": ""
+          },
+          {
+            "title": "Avocado Crab & Crevettes Calypso",
+            "prices": [
+              {
+                "label": "",
+                "price": "19.75"
+              }
+            ],
+            "body": ""
+          },
+          {
+            "title": "Garlic Shrimp",
+            "prices": [
+              {
+                "label": "",
+                "price": "22.75"
+              }
+            ],
+            "body": ""
+          },
+          {
+            "title": "Cozze ( mussels )",
+            "prices": [
+              {
+                "label": "",
+                "price": "23.50"
+              }
+            ],
+            "body": ""
+          },
+          {
+            "title": "Eggplant Parmesan",
+            "prices": [
+              {
+                "label": "",
+                "price": "15.95"
+              }
+            ],
+            "body": ""
+          }
+        ]
+      },
+      {
+        "title": "Insalata",
+        "items": [
+          {
+            "title": "Insalata Cesare",
+            "prices": [
+              {
+                "label": "P",
+                "price": "10.95"
+              },
+              {
+                "label": "G",
+                "price": "21.95"
+              }
+            ],
+            "body": "Romaine lettuce, croutons, parmesan and ceasar dressing"
+          },
+          {
+            "title": "Insalata Italiana",
+            "prices": [
+              {
+                "label": "P",
+                "price": "10.45"
+              },
+              {
+                "label": "G",
+                "price": "20.95"
+              }
+            ],
+            "body": "Mixed exotic greens and an italian dressing"
+          },
+          {
+            "title": "Insalata Alessandro",
+            "prices": [
+              {
+                "label": "P",
+                "price": "18.25"
+              },
+              {
+                "label": "G",
+                "price": "23.95"
+              }
+            ],
+            "body": "Mixed exotic greens, romaine lettuce, tomatoes, cucumbers, avocado, red grapes, feta, oranges and italian dressing"
+          },
+          {
+            "title": "Insalata Mediterranea",
+            "prices": [
+              {
+                "label": "P",
+                "price": "18.95"
+              },
+              {
+                "label": "G",
+                "price": "23.95"
+              }
+            ],
+            "body": "Cherry tomatoes, feta cheese, mixed peppers, red onion, black olives, meditterranean dressing and oregano"
+          },
+          {
+            "title": "Trio Insalata di Frutti di Mare",
+            "prices": [
+              {
+                "label": "",
+                "price": "28.95"
+              }
+            ],
+            "body": "Exotic greens with a blend of mixed seafood {crispy calamari, shrimps and crab in a creamy calypso sauce and Atlantic smoked salmon) garnished with cucumbers, endives and our Italian vinaigrette"
+          },
+          {
+            "title": "* add grilled chicken",
+            "prices": [
+              {
+                "label": "",
+                "price": "7.45"
+              }
+            ],
+            "body": ""
+          }
+        ]
+      },
+      {
+        "title": "Pollo / Vitello",
+        "items": [
+          {
+            "title": "Vitello Parmigiano",
+            "prices": [
+              {
+                "label": "",
+                "price": "31.95"
+              }
+            ],
+            "body": "Breaded veal with tomato sauce and mozzarella cheese, with penne arrabiata or spaghetti napolitana"
+          },
+          {
+            "title": "Vitello Marsala / Pollo Marsala",
+            "prices": [
+              {
+                "label": "Veau",
+                "price": "32.95"
+              },
+              {
+                "label": "Pollo",
+                "price": "29.45"
+              }
+            ],
+            "body": "Veal sautéed in marsala wine, mushrooms and demi-glace, with penne arrabiata or spaghetti napolitana"
+          },
+          {
+            "title": "Vitello Picatta / Pollo Picatta",
+            "prices": [
+              {
+                "label": "Veau",
+                "price": "32.95"
+              },
+              {
+                "label": "Pollo",
+                "price": "29.95"
+              }
+            ],
+            "body": "Veal sautéed in butter, lemon and white wine, with penne arrabiata or spaghetti napolitana"
+          },
+          {
+            "title": "Vitello Tutto Italia",
+            "prices": [
+              {
+                "label": "",
+                "price": "32.95"
+              }
+            ],
+            "body": "Veal sautéed in extra virgin olive oil, sundried tomatoes, roasted bell peppers, garlic, porcni mushrooms demi-glace and marsala wine with penne arrabiata or spaghetti napolitana"
+          },
+          {
+            "title": "Pollo Parmigiano",
+            "prices": [
+              {
+                "label": "",
+                "price": "30.95"
+              }
+            ],
+            "body": "Breaded chicken filet, tomato sauce, with mozzarella cheese with penne arrabiata or spaghetti napolitana"
+          }
+        ]
+      },
+      {
+        "title": "Pizza",
+        "items": [
+          {
+            "title": "Pizza Paesana",
+            "prices": [
+              {
+                "label": "",
+                "price": "22.45"
+              }
+            ],
+            "body": "Tomato sauce, sundried tomatoes, portobello mushrooms, mozzarella and goat cheese"
+          },
+          {
+            "title": "Pizza Bella",
+            "prices": [
+              {
+                "label": "",
+                "price": "23.75"
+              }
+            ],
+            "body": "Tomato sauce, grilled eggplant, grilled zucchini, wild mushrooms, brie and mozzarella cheese"
+          },
+          {
+            "title": "Pizza Napolitana",
+            "prices": [
+              {
+                "label": "",
+                "price": "21.95"
+              }
+            ],
+            "body": "Tomato sauce, basil, oregano, mozzarella cheese"
+          },
+          {
+            "title": "Pizza Carbonara",
+            "prices": [
+              {
+                "label": "",
+                "price": "23.95"
+              }
+            ],
+            "body": "Tomato sauce, italian sausage, bacon, onions and mozzarella cheese"
+          },
+          {
+            "title": "Pizza Giardino",
+            "prices": [
+              {
+                "label": "",
+                "price": "24.45"
+              }
+            ],
+            "body": "Tomato sauce, fresh spring vegetables, fresh basial and mozzarella cheese"
+          },
+          {
+            "title": "Pizza Americana",
+            "prices": [
+              {
+                "label": "",
+                "price": "24.45"
+              }
+            ],
+            "body": "Tomato sauce, pepperoni, mushrooms, peppers and mozzarella cheese"
+          },
+          {
+            "title": "Pizza Amorosa",
+            "prices": [
+              {
+                "label": "",
+                "price": "24.75"
+              }
+            ],
+            "body": "Tomato sauce, roasted red peppers, mushrooms, spinach, gorgonzola, parmesan and mozzarella cheese"
+          },
+          {
+            "title": "Pizza Pollo Meditarraneo",
+            "prices": [
+              {
+                "label": "",
+                "price": "25.95"
+              }
+            ],
+            "body": "Tomato sauce, grilled chicken, mushrooms, feta cheese, Kalamata olives, red onions, roasted red peppers and mozarella cheese"
+          }
+        ]
+      },
+      {
+        "title": "Griglia",
+        "items": [
+          {
+            "title": "Pollo Calabrese",
+            "prices": [
+              {
+                "label": "",
+                "price": "29.45"
+              }
+            ],
+            "body": "Charcoal broiled chicken filet, topped with grilled vegetables, goat cheese and rosemary potatoes"
+          },
+          {
+            "title": "Sirloin Steak",
+            "prices": [
+              {
+                "label": "",
+                "price": "44.95"
+              }
+            ],
+            "body": "Canadian AAA sirloin steak perfectly aged and cooked to perfection, seasoned with Scarolie's steak spice, peppercorn sauce, served with rosemary potatoes and grilled vegetables."
+          },
+          {
+            "title": "Rib Steak",
+            "prices": [
+              {
+                "label": "",
+                "price": "49.95"
+              }
+            ],
+            "body": "Perfectly aged rib steak (Canadian AAA) cooked to perfection, seasoned with Scarolie's steak spice, served with rosemary potatos and vegetables"
+          },
+          {
+            "title": "Rack of Lamb",
+            "prices": [
+              {
+                "label": "",
+                "price": "48.95"
+              }
+            ],
+            "body": "Charcoal broiled rack of lamb grilled to your choice {black rum, 5-spice and demi-glace}, served with rosemary potatoes and grilled vegetables"
+          }
+        ]
+      },
+      {
+        "title": "Pasta al Forno",
+        "items": [
+          {
+            "title": "Lasagna Casalinga",
+            "prices": [
+              {
+                "label": "",
+                "price": "25.45"
+              }
+            ],
+            "body": "Layers of pasta, meat sauce, ricotta and mozzarella cheese"
+          },
+          {
+            "title": "Manicotti",
+            "prices": [
+              {
+                "label": "",
+                "price": "22.95"
+              }
+            ],
+            "body": "Pasta stuffed with ricotta cheese and spinach, tomato sauce and mozzarella cheese"
+          },
+          {
+            "title": "Cannelloni",
+            "prices": [
+              {
+                "label": "",
+                "price": "23.95"
+              }
+            ],
+            "body": "Minced veal stuffed in pasta, tomato sauce and mozzarella"
+          },
+          {
+            "title": "Rotolo alla Milanese",
+            "prices": [
+              {
+                "label": "",
+                "price": "25.25"
+              }
+            ],
+            "body": "Rolled pasta stuffed with ricotta cheese, spinach and prosciutto. Mozzarella cheese and rosé sauce."
+          },
+          {
+            "title": "Portafoglio di Cranchio e Aragosta",
+            "prices": [
+              {
+                "label": "",
+                "price": "28.95"
+              }
+            ],
+            "body": "Portafoglio pasta stuffed with crab and lobster, baked in a brandy tomato cream lobster sauce with baby shrimp, baby scallops, pink peppercorns, diced shallots and mozzarella cheese"
+          }
+        ]
+      },
+      {
+        "title": "Pesce",
+        "items": [
+          {
+            "title": "Salmone del Atlantico",
+            "prices": [
+              {
+                "label": "",
+                "price": "30.95"
+              }
+            ],
+            "body": "Grilled salmon, with butter and fresh dill, sautéed spinach, served on a bed of white rice"
+          },
+          {
+            "title": "Fresh Salmon and Scampi Shrimp",
+            "prices": [
+              {
+                "label": "",
+                "price": "37.95"
+              }
+            ],
+            "body": "Fresh Atlantic salmon filet grilled to perfection and jumbo butterflied shrimp lightly seasoned then oven roasted. Served with white rice."
+          },
+          {
+            "title": "Gamberi alla Griglia",
+            "prices": [
+              {
+                "label": "",
+                "price": "31.95"
+              }
+            ],
+            "body": "Jumbo shrimps grilled and marinated, served with white rice and charcoal grilled vegetables"
+          },
+          {
+            "title": "Shrimp Scampi Style",
+            "prices": [
+              {
+                "label": "",
+                "price": "35.95"
+              }
+            ],
+            "body": "Jumbo butterflied shrimp (papillon style) lightly seasoned and then oven roasted with garlic butter placed on a bed of white rice & grilled vegetables. Served with garlic butter."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "lunch-menu",
+    "name": "Lunch menu",
+    "sections": [
+      {
+        "title": "~ Soupe of the Day Included ~",
+        "items": [
+          {
+            "title": "Spaghetti Bolognese",
+            "prices": [
+              {
+                "label": "",
+                "price": "19.45"
+              }
+            ],
+            "body": "Spaghettini pasta tossed with our homemade meat sauce"
+          },
+          {
+            "title": "Tortellini alla Rosa",
+            "prices": [
+              {
+                "label": "",
+                "price": "20.45"
+              }
+            ],
+            "body": "Tortellini stuffed with ricotta cheese sautéed in a rosé sauce with parmesan cheese"
+          },
+          {
+            "title": "Spaghetti Cacciatore",
+            "prices": [
+              {
+                "label": "",
+                "price": "20.45"
+              }
+            ],
+            "body": "Spaghetti in a tomato sauce with sautéed chicken, garlic, grilled peppers, shallots, mushrooms, pesto, onions, fresh basil, oregano, white wine and Kalamata olives"
+          },
+          {
+            "title": "Linguini Primavera",
+            "prices": [
+              {
+                "label": "",
+                "price": "20.45"
+              }
+            ],
+            "body": "Linguini pasta in a rosé sauce with fresh seasonal vegetables, white wine and garlic"
+          },
+          {
+            "title": "Lasagna Casalinga",
+            "prices": [
+              {
+                "label": "",
+                "price": "19.45"
+              }
+            ],
+            "body": "Layers of pasta, meat sauce, ricotta and mozzarella cheese"
+          },
+          {
+            "title": "Pizza Americana",
+            "prices": [
+              {
+                "label": "",
+                "price": "19.95"
+              }
+            ],
+            "body": "Tomato sauce, pepperoni, mushrooms, peppers and mozzarella cheese"
+          },
+          {
+            "title": "Insalata di Pollo Cesar",
+            "prices": [
+              {
+                "label": "",
+                "price": "19.95"
+              }
+            ],
+            "body": "Romaine lettuce, croutons, parmesan and ceasar dressing"
+          },
+          {
+            "title": "Insalata di Pollo Italienne",
+            "prices": [
+              {
+                "label": "",
+                "price": "19.75"
+              }
+            ],
+            "body": "Mixed exotic greens and an italian dressing"
+          },
+          {
+            "title": "Veau Marsala",
+            "prices": [
+              {
+                "label": "",
+                "price": "24.95"
+              }
+            ],
+            "body": "Veal sautéed in marsala wine, mushrooms and demi-glace, with penne arrabiata or spaghetti napolitana"
+          },
+          {
+            "title": "Pollo Parmegan",
+            "prices": [
+              {
+                "label": "",
+                "price": "22.95"
+              }
+            ],
+            "body": "Breaded chicken filet, tomato sauce, with mozzarella cheese with penne arrabiata or spaghetti napolitana"
+          },
+          {
+            "title": "Poulet alla Griglia Chipotle",
+            "prices": [
+              {
+                "label": "",
+                "price": "22.95"
+              }
+            ],
+            "body": "Grilled chipotle style chicken breast with zucchini, eggplant and grilled red pepper, served with white rice"
+          },
+          {
+            "title": "Hamburger alla Scarolies",
+            "prices": [
+              {
+                "label": "",
+                "price": "19.45"
+              }
+            ],
+            "body": "Grilled Angus beef Hamburger with our Scarolie's sauce, swiss & cheddar cheese, dijon mustard, onions & caramelized mushrooms. Served with fries."
+          },
+          {
+            "title": "Burger di Pollo alla Chipotle",
+            "prices": [
+              {
+                "label": "",
+                "price": "19.95"
+              }
+            ],
+            "body": "Grilled chicken breast burger with our chipotle rub, mayonnaise, mustard, pickles, red onions, and tomato"
+          },
+          {
+            "title": "Saumon Atlantique",
+            "prices": [
+              {
+                "label": "",
+                "price": "25.95"
+              }
+            ],
+            "body": "Grilled Atlantic salmon, served with teriyaki sauce, sautéed spinach, and a bed of white rice"
+          },
+          {
+            "title": "Insalata di Pollo alla Alessandro",
+            "prices": [
+              {
+                "label": "",
+                "price": "23.95"
+              }
+            ],
+            "body": "Mixed exotic greens, romaine lettuce, grilled chicken breast, tomatoes, cucumbers, avocado, red grapes, feta, oranges and italian dressing"
+          },
+          {
+            "title": "* add grilled chicken",
+            "prices": [
+              {
+                "label": "",
+                "price": "6.95"
+              }
+            ],
+            "body": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "family-meals-to-go",
+    "name": "Family meals to go",
+    "sections": [
+      {
+        "title": "Family Meals",
+        "items": [
+          {
+            "title": "1. Lasagna Platter",
+            "prices": [
+              {
+                "label": "",
+                "price": "49.95"
+              }
+            ],
+            "body": "Layers Of Pasta, Meat Sauce, Ricotta And Mozzarella Cheese"
+          },
+          {
+            "title": "2. Chicken Cacciatore Casserole",
+            "prices": [
+              {
+                "label": "",
+                "price": "52.95"
+              }
+            ],
+            "body": "Strips of chicken breast with button mushrooms, red bell peppers, Kalamata black olives, shallots, baby onions, fresh oregano, garlic, pesto and cherry tomatoes served over penne pasta."
+          },
+          {
+            "title": "3. Salmon Filets",
+            "prices": [
+              {
+                "label": "",
+                "price": "62.95"
+              }
+            ],
+            "body": "Fresh Atlantic salmon filet grilled to perfection, topped with butter and dill served with rice, fresh asparagus and our homemade marinara sauce."
+          },
+          {
+            "title": "4. Tortellini Gigi Casserole",
+            "prices": [
+              {
+                "label": "",
+                "price": "56.95"
+              }
+            ],
+            "body": "Tortelinni pasta in our Scarolies cream and tomato sauce with proscuitto, buttom mushrooms, white wine and shallots served with mozzarella cheese and baked in the oven."
+          },
+          {
+            "title": "5. Penne Arosto Casserole",
+            "prices": [
+              {
+                "label": "",
+                "price": "54.95"
+              }
+            ],
+            "body": "Penne pasta in our Scarolie's tomato sauce with chopped Italian sausage, pesto, roasted red bell peppers, garlic, shallots and white wine served with mozzarella cheese and baked in the oven."
+          },
+          {
+            "title": "6. Spaghetti Bolognese Platter",
+            "prices": [
+              {
+                "label": "",
+                "price": "50.95"
+              }
+            ],
+            "body": "Spaghetti pasta served with our Scarolie's meat sauce and 8 meat balls"
+          },
+          {
+            "title": "7. Pollo Callabrese Platter",
+            "prices": [
+              {
+                "label": "",
+                "price": "52.95"
+              }
+            ],
+            "body": "Grilled chicken breast served on a bed of rice with grilled zuchini, roasted red bell peppers and roasted eggplant."
+          },
+          {
+            "title": "8. Mixed Grill Platter",
+            "prices": [
+              {
+                "label": "",
+                "price": "62.95"
+              }
+            ],
+            "body": "Chicken breasts, pork chops and Italian sausages grilled to perfection and served on a bed of rice with grilled zucchini, eggplant and roasted red peppers."
+          },
+          {
+            "title": "9. Pork Chops",
+            "prices": [
+              {
+                "label": "",
+                "price": "51.95"
+              }
+            ],
+            "body": "Pork Chops marinated with olive oil and rosemary brushed with our Southern Bar B.Q sauce, grilled to perfection served with rice and asparagus."
+          },
+          {
+            "title": "10. Chicken Parmiggiano",
+            "prices": [
+              {
+                "label": "",
+                "price": "66.95"
+              }
+            ],
+            "body": "Breaded chicken filet, tomato sauce, baked with mozarella cheese. served with spagetti napolitana."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "1000-martinis-cocktails",
+    "name": "$13.00 martinis &amp; cocktails!",
+    "sections": [
+      {
+        "title": "Martinis & Cocktails",
+        "items": []
+      }
+    ]
+  },
+  {
+    "slug": "carte-vins-wine-list",
+    "name": "Carte des Vins- Wine List",
+    "sections": [
+      {
+        "title": "Cliquez pour Télécharger le menu",
+        "items": []
+      }
+    ]
+  }
+]

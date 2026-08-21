@@ -1,0 +1,10 @@
+{
+  "alert": {
+    "enabled": false,
+    "en": "Open as published. Edit this line in content/ops.json (or /admin) for a closure.",
+    "fr": "Ouvert selon les heures publiées. Modifiez cette ligne dans content/ops.json (ou /admin) pour une fermeture."
+  },
+  "analytics": {
+    "goatcounter": ""
+  }
+}
