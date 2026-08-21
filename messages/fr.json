@@ -18,11 +18,13 @@
   "home": {
     "kicker": "Pointe-Claire · Italien",
     "title": "Scarolie's",
-    "lead": "Pasta emporium sur Saint-Jean. Une table sur TB Dine, ou au (514) 694-8611.",
+    "lead": "Pasta emporium sur Saint-Jean. Demandez une table au maître d’ — un aperçu, puis l’appel. TB Dine est leur outil en ligne.",
     "heroAlt": "Carré d’agneau, romarin, légumes grillés et sauce.",
-    "ctaCall": "Réserver une table",
+    "ctaCall": "Demander une table",
+    "ctaPhone": "Appeler",
     "ctaBook": "Heures",
     "ctaMenu": "Le menu",
+    "ctaTbdine": "TB Dine",
     "ctaForm": "Repas familial",
     "tileHours": "Heures",
     "tileHoursSub": "Pointe-Claire",
@@ -41,8 +43,15 @@
     "svcMore": "Le menu",
     "placeKicker": "une salle",
     "placeTitle": "950, Saint-Jean, Pointe-Claire",
-    "placeLead": "Cuisine italienne, patio, stationnement gratuit. Lundi au jeudi 11 h – 21 h, vendredi et samedi jusqu’à 22 h, dimanche 11 h – 21 h.",
+    "placeLead": "Cuisine italienne. Lundi au jeudi 11 h – 21 h, vendredi et samedi jusqu’à 22 h, dimanche 11 h – 21 h.",
     "placeMap": "Heures et carte",
+    "factPatio": "Patio",
+    "factParking": "Stationnement gratuit",
+    "factAccess": "Accessible aux fauteuils",
+    "factPay": "Visa · Mastercard · Interac",
+    "roomKicker": "la salle",
+    "roomTitle": "Brique, fresque, une table",
+    "roomLead": "Leur salle — fresques, brique, le mur de vins. Photos de la maison.",
     "hoursTitle": "Heures",
     "aboutTitle": "Pâtes, famille, une table",
     "aboutLead": "Scarolie's est reconnu pour sa cuisine italienne et une salle chaleureuse — recettes classiques, spécialités de la maison, et une carte des vins. Souper intime, groupe, ou repas d’affaires.",
@@ -59,7 +68,7 @@
   },
   "appointments": {
     "title": "Une table",
-    "lead": "Les réservations en ligne passent par TB Dine, l’outil sur leur site. Vous pouvez aussi téléphoner. Le courriel sert aux messages — il ne prend pas les tables.",
+    "lead": "Demandez au maître d’ dans le coin — il fait le tour d’une table en aperçu, puis vous téléphonez au (514) 694-8611 pour que la salle la prenne. TB Dine sur leur site prend aussi les tables. Le courriel, non.",
     "hoursNote": "Lundi au jeudi 11 h – 21 h. Vendredi et samedi 11 h – 22 h. Dimanche 11 h – 21 h.",
     "emailNote": "Questions : scarolies@yahoo.ca. Tables : TB Dine ou (514) 694-8611.",
     "urgentLead": "Sans réservation, c’est possible ; TB Dine ou un appel reste le plus sûr."
@@ -83,7 +92,7 @@
   "chat": {
     "open": "Demander au maître d’",
     "title": "Scarolie's",
-    "status": "Votre maître d’ — menu, heures et tables.",
+    "status": "Votre maître d’ — la carte, et une table. Aperçu, puis l’appel.",
     "close": "Fermer",
     "placeholder": "Écrivez votre question…",
     "placeholderReason": "Ce soir ?",
@@ -94,6 +103,12 @@
     "mic": "Parler",
     "listening": "Écoute…",
     "emailNote": "Courriel"
+  },
+  "music": {
+    "idle": "Musique éteinte",
+    "playing": "Musique allumée",
+    "on": "Lancer l’ambiance du ristorante",
+    "off": "Arrêter la musique"
   },
   "footer": {
     "line": "Italien · Pointe-Claire · pâtes, pizza, grillades"

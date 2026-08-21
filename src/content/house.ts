@@ -861,12 +861,8 @@ export const housePickIds = [
   'spaghetti-cacciatore',
   'linguini-con-gamberetti-alla-brandy-rosa',
   'rotolo-alla-milanese',
-  'lasagna-casalinga',
-  'bistecca-surlonge-alla-griglia',
-  'pollo-calabrese',
-  'capelli-di-angelo-alla-diablo',
-  'insalata-caprese-di-burrata',
-  'pizza-americana',
+  'ravioli-of-aragosta',
+  'linguini-pescatore',
 ] as const;
 
 export const housePicks = housePickIds

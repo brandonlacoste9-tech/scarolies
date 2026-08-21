@@ -18,11 +18,13 @@
   "home": {
     "kicker": "Pointe-Claire · Italian",
     "title": "Scarolie's",
-    "lead": "Pasta emporium on St-Jean. A table through TB Dine, or call (514) 694-8611.",
+    "lead": "Pasta emporium on St-Jean. Ask the maître d’ for a table — a preview, then you call. TB Dine is their live booker.",
     "heroAlt": "Rack of lamb with rosemary, grilled vegetables, and sauce.",
-    "ctaCall": "Reserve a table",
+    "ctaCall": "Ask for a table",
+    "ctaPhone": "Call",
     "ctaBook": "Hours",
     "ctaMenu": "The menu",
+    "ctaTbdine": "TB Dine",
     "ctaForm": "Family plates",
     "tileHours": "Hours",
     "tileHoursSub": "Pointe-Claire",
@@ -41,8 +43,15 @@
     "svcMore": "Full menu",
     "placeKicker": "one room",
     "placeTitle": "950 St-Jean, Pointe-Claire",
-    "placeLead": "Italian cooking, patio, free parking. Monday–Thursday 11:00–21:00, Friday–Saturday until 22:00, Sunday 11:00–21:00.",
+    "placeLead": "Italian cooking. Monday–Thursday 11:00–21:00, Friday–Saturday until 22:00, Sunday 11:00–21:00.",
     "placeMap": "Hours and map",
+    "factPatio": "Patio",
+    "factParking": "Free parking",
+    "factAccess": "Wheelchair accessible",
+    "factPay": "Visa · Mastercard · Interac",
+    "roomKicker": "the room",
+    "roomTitle": "Brick, fresco, a table",
+    "roomLead": "Their dining room — frescoes, brick, the wine wall. Photos from the house.",
     "hoursTitle": "Hours",
     "aboutTitle": "Pasta, family, a table",
     "aboutLead": "Scarolie's is known for Italian cooking and a warm room — classic recipes, house plates, and a wine list. Intimate dinners, groups, and business tables.",
@@ -59,7 +68,7 @@
   },
   "appointments": {
     "title": "A table",
-    "lead": "Online reservations go through TB Dine, the booker on their live site. You can also call. Email is for messages — it does not take tables.",
+    "lead": "Ask the maître d’ in the corner — he walks through a table as a preview, then you call (514) 694-8611 so the floor can take it. TB Dine on their live site also takes tables. Email does not.",
     "hoursNote": "Monday–Thursday 11:00–21:00. Friday–Saturday 11:00–22:00. Sunday 11:00–21:00.",
     "emailNote": "Questions: scarolies@yahoo.ca. Tables: TB Dine or (514) 694-8611.",
     "urgentLead": "Walk-in is possible; a reservation on TB Dine or a call is the sure way."
@@ -83,7 +92,7 @@
   "chat": {
     "open": "Ask the maître d’",
     "title": "Scarolie's",
-    "status": "Your maître d’ — menu, hours, and tables.",
+    "status": "Your maître d’ — the card, and a table. Preview, then you call.",
     "close": "Close",
     "placeholder": "Type your question…",
     "placeholderReason": "Tonight?",
@@ -94,6 +103,12 @@
     "mic": "Speak",
     "listening": "Listening…",
     "emailNote": "Email"
+  },
+  "music": {
+    "idle": "Music off",
+    "playing": "Music on",
+    "on": "Play Italian restaurant ambiance",
+    "off": "Stop the music"
   },
   "footer": {
     "line": "Italian · Pointe-Claire · pasta, pizza, grill"

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { DishCard } from '@/components/DishCard';
+import { DamaskFrame } from '@/components/layout/DamaskFrame';
 import { locations, menu } from '@/content/house';
-import { photoForItem } from '@/content/menuPhotos';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 
@@ -25,7 +25,8 @@ export default async function TakeawayPage({ params }: Props) {
   const family = menu.find((section) => section.id === 'family');
 
   return (
-    <section className="mx-auto max-w-[1280px] px-6 py-16 md:py-24">
+    <DamaskFrame>
+      <div>
       <p className="text-[0.72rem] tracking-[0.28em] text-muted uppercase">{t('kicker')}</p>
       <h1 className="mt-3 text-5xl font-medium text-ink md:text-7xl">{t('title')}.</h1>
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{t('lead')}</p>
@@ -44,12 +45,11 @@ export default async function TakeawayPage({ params }: Props) {
       {family ? (
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {family.items.map((item) => {
-            const photo = photoForItem(item.id, 'family');
             const price = 'price' in item && item.price ? item.price : null;
             const body = 'body' in item && item.body ? item.body[lang] : null;
             return (
               <li key={item.id}>
-                <DishCard title={item.title[lang]} price={price} body={body} photo={photo} />
+                <DishCard title={item.title[lang]} price={price} body={body} />
               </li>
             );
           })}
@@ -75,6 +75,7 @@ export default async function TakeawayPage({ params }: Props) {
           {t('contact')}
         </Link>
       </div>
-    </section>
+      </div>
+    </DamaskFrame>
   );
 }

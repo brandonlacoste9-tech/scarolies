@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { LocaleSwitch } from '@/components/layout/LocaleSwitch';
+import { OpenMaitreButton, openMaitre } from '@/components/OpenMaitre';
 import { bookUrl, house, locations } from '@/content/house';
 import { Link, usePathname } from '@/i18n/navigation';
 
@@ -47,9 +48,14 @@ export function SiteHeader() {
           <span className="tracking-[0.14em] text-gold uppercase">
             {locale === 'fr' ? 'Pointe-Claire · Italien' : 'Pointe-Claire · Italian'}
           </span>
-          <a href={desk.phoneHref} className="hover:text-gold">
-            {desk.phone}
-          </a>
+          <span className="flex flex-wrap items-center gap-x-4">
+            <a href={desk.phoneHref} className="hover:text-gold">
+              {desk.phone}
+            </a>
+            <a href={reserve} target="_blank" rel="noreferrer" className="hover:text-gold">
+              TB Dine
+            </a>
+          </span>
         </div>
       </div>
       <header className="border-b border-line bg-paper text-ink">
@@ -76,16 +82,14 @@ export function SiteHeader() {
           </button>
 
           <Link href="/" className="flex min-w-0 flex-1 items-center md:flex-none">
-            <span className="rounded-sm bg-navy px-2 py-1">
-              <Image
-                src="/logo.png"
-                alt={house.name}
-                width={280}
-                height={72}
-                className="h-10 w-auto md:h-12"
-                priority
-              />
-            </span>
+            <Image
+              src="/logo.png"
+              alt={house.name}
+              width={280}
+              height={72}
+              className="h-11 w-auto md:h-12"
+              priority
+            />
           </Link>
 
           <nav aria-label="Primary" className="hidden flex-1 items-center justify-center gap-x-6 md:flex">
@@ -105,14 +109,12 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center justify-end gap-3 md:gap-5">
-            <a
-              href={reserve}
-              target="_blank"
-              rel="noreferrer"
+            <OpenMaitreButton
+              book
               className="inline-flex h-11 items-center bg-navy px-3 text-[0.68rem] tracking-[0.16em] text-paper uppercase md:px-4"
             >
               {t('book')}
-            </a>
+            </OpenMaitreButton>
             <div className="hidden md:block">
               <LocaleSwitch tone="light" />
             </div>
@@ -151,14 +153,16 @@ export function SiteHeader() {
               ))}
             </nav>
             <div className="flex flex-wrap items-center justify-between gap-4 px-6 py-6">
-              <a
-                href={reserve}
-                target="_blank"
-                rel="noreferrer"
+              <button
+                type="button"
                 className="inline-flex h-11 items-center bg-navy px-4 text-[0.72rem] tracking-[0.16em] text-paper uppercase"
+                onClick={() => {
+                  setOpen(false);
+                  openMaitre(true);
+                }}
               >
                 {t('book')}
-              </a>
+              </button>
               <LocaleSwitch tone="light" />
             </div>
           </div>

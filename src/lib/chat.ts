@@ -106,8 +106,8 @@ function findDishes(q: string): DishHit[] {
       for (const w of words) {
         if (titles.includes(w)) score += 40;
         else if (titleHay.split(' ').includes(w)) score += 18;
-        else if (titleHay.includes(w)) score += 12;
-        else if (hay.includes(w)) score += 4;
+        else if (w.length > 3 && titleHay.includes(w)) score += 12;
+        else if (w.length > 3 && hay.includes(w)) score += 4;
       }
       if (score > 0) hits.push({ section, item, score });
     }
@@ -175,8 +175,8 @@ function replyDishes(hits: DishHit[], locale: Locale): ChatReply {
 
 export function openingChat(locale: Locale): string {
   return say(locale, {
-    en: "Welcome to Scarolie's. I know the card — pasta, grill, pizza, lunch with soup of the day, family plates for four. How can I look after you?",
-    fr: "Bonjour — Scarolie's. Je connais la carte : pâtes, grillades, pizza, menu midi avec soupe du jour, repas familial pour quatre. Comment puis-je vous aider ?",
+    en: "Welcome to Scarolie's. I know the card, and I will take a table for you — tonight that is a preview, then you call the floor. How can I look after you?",
+    fr: "Bonjour — Scarolie's. Je connais la carte, et je prendrai une table pour vous — ce soir c’est un aperçu, puis vous téléphonez. Comment puis-je vous aider ?",
   });
 }
 
@@ -189,11 +189,197 @@ export function emailNote(_text: string) {
   return house.emailHref;
 }
 
-export function continueChat(raw: string, locale: Locale, _state?: BookState): ChatReply {
+const COVER_WORDS: Record<string, string> = {
+  one: '1',
+  two: '2',
+  deux: '2',
+  couple: '2',
+  three: '3',
+  trois: '3',
+  four: '4',
+  quatre: '4',
+  five: '5',
+  cinq: '5',
+  six: '6',
+  seven: '7',
+  sept: '7',
+  eight: '8',
+  huit: '8',
+  nine: '9',
+  neuf: '9',
+  ten: '10',
+  dix: '10',
+  twelve: '12',
+  douze: '12',
+};
+
+function extractCovers(q: string): string | null {
+  const labeled = q.match(
+    /\b(?:for|pour|de|of|we are|on est|nous sommes|table of|table de|covers|couverts)\s+(\d{1,2})\b/,
+  );
+  if (labeled) {
+    const n = Number(labeled[1]);
+    if (n >= 1 && n <= 40) return String(n);
+  }
+  const people = q.match(/\b(\d{1,2})\s*(?:people|persons|personnes|guests|invites|covers|couverts)\b/);
+  if (people) {
+    const n = Number(people[1]);
+    if (n >= 1 && n <= 40) return String(n);
+  }
+  for (const [word, n] of Object.entries(COVER_WORDS)) {
+    if (new RegExp(`\\b${word}\\b`).test(q)) return n;
+  }
+  const only = q.match(/^\s*(\d{1,2})\s*$/);
+  if (only) {
+    const n = Number(only[1]);
+    if (n >= 1 && n <= 40) return String(n);
+  }
+  return null;
+}
+
+function extractWhen(q: string, raw: string): string | null {
+  if (has(q, 'ce soir')) return 'ce soir';
+  if (has(q, 'tonight', 'this evening')) return 'tonight';
+  if (has(q, 'demain')) return 'demain';
+  if (has(q, 'tomorrow')) return 'tomorrow';
+  if (has(q, 'midi')) return 'le midi';
+  if (has(q, 'lunch', 'noon')) return 'lunch';
+  const days: [string, string][] = [
+    ['monday', 'lundi'],
+    ['tuesday', 'mardi'],
+    ['wednesday', 'mercredi'],
+    ['thursday', 'jeudi'],
+    ['friday', 'vendredi'],
+    ['saturday', 'samedi'],
+    ['sunday', 'dimanche'],
+  ];
+  for (const [en, fr] of days) {
+    if (has(q, en, fr)) return raw.trim();
+  }
+  const clock = q.match(/\b(\d{1,2})\s*(?:h|hr|hrs|pm|am|:00)\b/) || q.match(/\bat\s+(\d{1,2})\b/) || q.match(/\ba\s+(\d{1,2})\s*h\b/);
+  if (clock) return raw.trim();
+  if (q.length > 2 && q.length < 48 && !has(q, 'table', 'reserve', 'book', 'want', 'veux', 'voudrais')) {
+    return raw.trim();
+  }
+  return null;
+}
+
+function wantsTable(q: string): boolean {
+  return has(
+    q,
+    'book',
+    'table',
+    'rendez',
+    'reserve',
+    'reservation',
+    'tbdine',
+    'tb dine',
+    'a table',
+    'une table',
+    'covers',
+    'couverts',
+  );
+}
+
+function phoneLinks(locale: Locale): ChatLink[] {
+  const site = locations[0];
+  return [
+    { href: site.phoneHref, label: site.phone },
+    { href: bookUrl(locale), label: 'TB Dine' },
+  ];
+}
+
+function startBook(locale: Locale): ChatReply {
+  return {
+    step: 'reason',
+    reason: '',
+    links: phoneLinks(locale),
+    reply: say(locale, {
+      en: 'I will take the table for you — that is the idea. This walk-through is a preview; the floor still takes the call. Which evening, and about what time?',
+      fr: 'Je prendrai la table pour vous — c’est l’idée. Ici, c’est un aperçu ; le plancher prend encore l’appel. Quel soir, et vers quelle heure ?',
+    }),
+  };
+}
+
+function askCovers(locale: Locale, when: string): ChatReply {
+  return {
+    step: 'attached',
+    reason: when,
+    links: phoneLinks(locale),
+    reply: say(locale, {
+      en: `${when} — how many of you?`,
+      fr: `${when} — vous serez combien ?`,
+    }),
+  };
+}
+
+function finishBook(locale: Locale, when: string, covers: string): ChatReply {
+  const site = locations[0];
+  return {
+    step: 'idle',
+    reason: '',
+    links: phoneLinks(locale),
+    reply: say(locale, {
+      en: `A table for ${covers}, ${when}. That is how I will take it — you tell me, I hold it. Today this is a preview: please call ${site.phone} so the restaurant can take the table. When we wire it, I place it myself. I do not confirm it here. Their live booker, TB Dine, is also on the site.`,
+      fr: `Une table pour ${covers}, ${when}. C’est ainsi que je la prendrai — vous me la dites, je la retiens. Aujourd’hui c’est un aperçu : téléphonez au ${site.phone} pour que la salle la prenne. Quand ce sera branché, je poserai la table moi-même. Je ne la confirme pas ici. Leur outil en ligne, TB Dine, est aussi sur le site.`,
+    }),
+  };
+}
+
+export function continueChat(raw: string, locale: Locale, state?: BookState): ChatReply {
   const q = fold(raw);
   const empty = { step: 'idle' as const, reason: '', links: [] as ChatLink[] };
   const site = locations[0];
   const reserve = bookUrl(locale);
+  const step = state?.step ?? 'idle';
+  const prior = (state?.reason ?? '').trim();
+
+  const breakBook =
+    has(q, 'menu', 'pasta', 'pizza', 'hour', 'horaire', 'open', 'ouvert') &&
+    !has(q, 'table', 'reserve', 'book', 'reservation');
+
+  if ((step === 'reason' || step === 'attached') && !breakBook) {
+    if (has(q, 'cancel', 'nevermind', 'never mind', 'oublie', 'annule', 'stop', 'laisse')) {
+      return {
+        ...empty,
+        reply: say(locale, {
+          en: `No table held from this chat. Call ${site.phone} if you still want one.`,
+          fr: `Aucune table retenue d’ici. Téléphonez au ${site.phone} si vous en voulez une.`,
+        }),
+        links: phoneLinks(locale),
+      };
+    }
+
+    if (step === 'reason') {
+      const covers = extractCovers(q);
+      const when = extractWhen(q, raw) || raw.trim();
+      if (covers) return finishBook(locale, when, covers);
+      return askCovers(locale, when);
+    }
+
+    const covers = extractCovers(q) || raw.trim();
+    const when = prior || (locale === 'fr' ? 'ce soir' : 'this evening');
+    return finishBook(locale, when, covers);
+  }
+
+  if (wantsTable(q)) {
+    const covers = extractCovers(q);
+    const when = extractWhen(q, raw);
+    if (covers && when) return finishBook(locale, when, covers);
+    if (when && !covers) return askCovers(locale, when);
+    if (covers && !when) {
+      return {
+        step: 'reason',
+        reason: '',
+        links: phoneLinks(locale),
+        reply: say(locale, {
+          en: `A table for ${covers} — I will take it. Which evening, and about what time? This is a preview; then you call ${site.phone}.`,
+          fr: `Une table pour ${covers} — je la prendrai. Quel soir, et vers quelle heure ? C’est un aperçu ; ensuite vous téléphonez au ${site.phone}.`,
+        }),
+      };
+    }
+    return startBook(locale);
+  }
 
   if (has(q, 'vip', 'newsletter', 'bulletin')) {
     return {
@@ -366,20 +552,6 @@ export function continueChat(raw: string, locale: Locale, _state?: BookState): C
     return replyDishes(dishHits, locale);
   }
 
-  if (has(q, 'book', 'table', 'rendez', 'reserve', 'reservation', 'tbdine', 'tb dine')) {
-    return {
-      ...empty,
-      reply: say(locale, {
-        en: 'Reserve on TB Dine — that is their live booker — or call (514) 694-8611. Email does not take tables.',
-        fr: 'Réservez sur TB Dine — c’est leur outil en ligne — ou au (514) 694-8611. Le courriel ne prend pas les tables.',
-      }),
-      links: [
-        { href: reserve, label: 'TB Dine' },
-        { href: site.phoneHref, label: site.phone },
-      ],
-    };
-  }
-
   if (has(q, 'price', 'prix', 'cost', 'combien')) {
     if (dishHits.length) return replyDishes(dishHits, locale);
     return {
@@ -395,8 +567,8 @@ export function continueChat(raw: string, locale: Locale, _state?: BookState): C
   return {
     ...empty,
     reply: say(locale, {
-      en: 'Ask me for a table, hours, or a dish. Reserve on TB Dine or call (514) 694-8611. 950 St-Jean, Pointe-Claire.',
-      fr: 'Demandez-moi une table, les heures, ou un plat. Réservez sur TB Dine ou au (514) 694-8611. 950, Saint-Jean, Pointe-Claire.',
+      en: 'Ask me for a table, hours, or a dish. I will take the table as a preview, then you call (514) 694-8611. 950 St-Jean, Pointe-Claire.',
+      fr: 'Demandez-moi une table, les heures, ou un plat. Je prends la table en aperçu, puis vous téléphonez au (514) 694-8611. 950, Saint-Jean, Pointe-Claire.',
     }),
     links: [menuLink(locale), { href: reserve, label: 'TB Dine' }],
   };

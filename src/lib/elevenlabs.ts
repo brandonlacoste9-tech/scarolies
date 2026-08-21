@@ -1,5 +1,5 @@
 export const CLINIC_VOICE = 'UJCi4DDncuo0VJDSIegj';
-export const GREEK_MAITRE_VOICE = 'ejJ1ETWS2ohLMMeCu1H3';
+export const ITALIAN_MAITRE_VOICE = 'UEw8Jol3Z7Kb3TdaL0BQ';
 export const FALLBACK_VOICE = 'pFZP5JQG7iQjIQuC4Bku';
 
 export type VoiceLocale = 'en' | 'fr';
@@ -20,6 +20,6 @@ export function parseVoiceRequest(body: unknown): {
 export function elevenLabsConfig(locale: VoiceLocale = 'en') {
   const apiKey = process.env.ELEVENLABS_API_KEY?.trim() ?? '';
   const frenchId = process.env.ELEVENLABS_VOICE_ID_FR?.trim() || CLINIC_VOICE;
-  const englishId = process.env.ELEVENLABS_VOICE_ID?.trim() || GREEK_MAITRE_VOICE;
+  const englishId = process.env.ELEVENLABS_VOICE_ID?.trim() || ITALIAN_MAITRE_VOICE;
   return { apiKey, voiceId: locale === 'fr' ? frenchId : englishId };
 }

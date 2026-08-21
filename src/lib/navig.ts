@@ -10,8 +10,8 @@ export function orient(_reason: string, _attached: Attachment): Orientation {
   return {
     path: 'contact',
     speak: {
-      en: 'Reserve on TB Dine, or call (514) 694-8611.',
-      fr: 'Réservez sur TB Dine, ou téléphonez au (514) 694-8611.',
+      en: 'Ask the maître d’ for a table — preview, then call (514) 694-8611.',
+      fr: 'Demandez une table au maître d’ — aperçu, puis (514) 694-8611.',
     },
   };
 }

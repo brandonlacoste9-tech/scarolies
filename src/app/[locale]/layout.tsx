@@ -5,6 +5,7 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { LetsChat } from '@/components/chat/LetsChat';
+import { AmbiancePlayer } from '@/components/layout/AmbiancePlayer';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { AlertBar } from '@/components/layout/AlertBar';
 import { SiteHeader } from '@/components/layout/SiteHeader';
@@ -69,6 +70,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             </main>
             <SiteFooter />
             <WalkinBar />
+            <AmbiancePlayer />
             <LetsChat />
           </div>
         </NextIntlClientProvider>

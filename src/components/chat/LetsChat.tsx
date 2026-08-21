@@ -14,6 +14,10 @@ import type { Locale } from '@/i18n/routing';
 
 type Line = { from: 'clinic' | 'guest'; text: string; links?: ChatLink[] };
 
+function duckMusic(speaking: boolean) {
+  window.dispatchEvent(new CustomEvent('scarolies:maitre-speaking', { detail: { speaking } }));
+}
+
 export function LetsChat() {
   const locale = useLocale() as Locale;
   const t = useTranslations('chat');
@@ -36,6 +40,29 @@ export function LetsChat() {
   useEffect(() => {
     setMicReady(Boolean(getSpeechRecognitionCtor()));
   }, []);
+
+  const askRef = useRef<(text: string) => Promise<void>>(async () => {});
+
+  useEffect(() => {
+    function onOpen(event: Event) {
+      const book = Boolean((event as CustomEvent<{ book?: boolean }>).detail?.book);
+      setOpen(true);
+      window.dispatchEvent(new CustomEvent('scarolies:chat-visibility', { detail: { open: true } }));
+      if (book) {
+        greetedRef.current = true;
+        queueMicrotask(() => {
+          void askRef.current(t('bookPrompt'));
+        });
+        return;
+      }
+      if (!greetedRef.current) {
+        greetedRef.current = true;
+        void speak(hello);
+      }
+    }
+    window.addEventListener('scarolies:open-chat', onOpen);
+    return () => window.removeEventListener('scarolies:open-chat', onOpen);
+  }, [hello, t]);
 
   useEffect(() => {
     function flush() {
@@ -72,17 +99,27 @@ export function LetsChat() {
       speakTokenRef.current += 1;
       audioRef.current?.pause();
       if (objectUrlRef.current) URL.revokeObjectURL(objectUrlRef.current);
+      duckMusic(false);
     };
   }, []);
 
   function speakBrowser(text: string, token: number) {
-    if (!window.speechSynthesis) return;
+    if (!window.speechSynthesis) {
+      duckMusic(false);
+      return;
+    }
     window.speechSynthesis.cancel();
     const utter = new SpeechSynthesisUtterance(text);
     utter.lang = speechUtteranceLang(locale);
     utter.rate = 0.96;
     const voice = pickFemaleBrowserVoice(locale);
     if (voice) utter.voice = voice;
+    utter.onend = () => {
+      if (token === speakTokenRef.current) duckMusic(false);
+    };
+    utter.onerror = () => {
+      if (token === speakTokenRef.current) duckMusic(false);
+    };
     window.speechSynthesis.speak(utter);
     if (token !== speakTokenRef.current) window.speechSynthesis.cancel();
   }
@@ -93,6 +130,9 @@ export function LetsChat() {
     audio.preload = 'auto';
     audio.volume = 1;
     audioRef.current = audio;
+    audio.onended = () => {
+      if (token === speakTokenRef.current) duckMusic(false);
+    };
     await audio.play();
     if (token !== speakTokenRef.current) audio.pause();
   }
@@ -102,6 +142,7 @@ export function LetsChat() {
     pendingUrlRef.current = null;
     window.speechSynthesis?.cancel();
     audioRef.current?.pause();
+    duckMusic(true);
     try {
       const res = await fetch('/api/voice', {
         method: 'POST',
@@ -130,13 +171,17 @@ export function LetsChat() {
       if (prevUrl) URL.revokeObjectURL(prevUrl);
     } catch {
       if (token !== speakTokenRef.current) return;
-      if (planVoicePlayback({ receivedAudio: false }) !== 'browser-tts') return;
+      if (planVoicePlayback({ receivedAudio: false }) !== 'browser-tts') {
+        duckMusic(false);
+        return;
+      }
       speakBrowser(text, token);
     }
   }
 
   async function openDesk() {
     setOpen(true);
+    window.dispatchEvent(new CustomEvent('scarolies:chat-visibility', { detail: { open: true } }));
     if (greetedRef.current) return;
     greetedRef.current = true;
     await speak(hello);
@@ -144,10 +189,12 @@ export function LetsChat() {
 
   function closeDesk() {
     setOpen(false);
+    window.dispatchEvent(new CustomEvent('scarolies:chat-visibility', { detail: { open: false } }));
     speakTokenRef.current += 1;
     pendingUrlRef.current = null;
     window.speechSynthesis?.cancel();
     audioRef.current?.pause();
+    duckMusic(false);
     setBookStep('idle');
     setBookReason('');
   }
@@ -195,6 +242,8 @@ export function LetsChat() {
     }
   }
 
+  askRef.current = ask;
+
   function onSubmit(event: FormEvent) {
     event.preventDefault();
     void ask(input);
@@ -224,7 +273,7 @@ export function LetsChat() {
     <>
       {open ? (
         <section
-          className="fixed right-4 bottom-24 z-50 flex max-h-[min(32rem,70dvh)] w-[min(calc(100vw-2rem),22rem)] flex-col overflow-hidden rounded-xl bg-paper shadow-[0_16px_40px_rgba(1,2,5,0.18)]"
+          className="fixed right-4 bottom-20 z-50 flex max-h-[min(32rem,70dvh)] w-[min(calc(100vw-2rem),22rem)] flex-col overflow-hidden rounded-xl bg-paper shadow-[0_16px_40px_rgba(1,2,5,0.18)] md:bottom-24"
           aria-label={t('title')}
         >
           <header className="flex items-start justify-between gap-3 bg-navy px-4 py-3 text-paper">
@@ -306,7 +355,7 @@ export function LetsChat() {
         <button
           type="button"
           onClick={() => void openDesk()}
-          className="fixed right-4 bottom-24 z-40 flex items-center gap-2 rounded-lg bg-navy px-4 py-2.5 text-sm text-paper"
+          className="fixed right-4 bottom-[4.75rem] z-40 flex items-center gap-2 rounded-lg bg-navy px-4 py-2.5 text-sm text-paper md:bottom-24"
         >
           <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
             <path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />

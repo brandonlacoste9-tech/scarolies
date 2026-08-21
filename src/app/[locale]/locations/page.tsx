@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { DamaskFrame } from '@/components/layout/DamaskFrame';
 import { bookUrl, locations } from '@/content/house';
 import type { Locale } from '@/i18n/routing';
 
@@ -21,7 +22,8 @@ export default async function LocationsPage({ params }: Props) {
   const reserve = bookUrl(lang);
 
   return (
-    <section className="mx-auto max-w-[960px] px-6 py-16 md:py-24">
+    <DamaskFrame innerClassName="mx-auto max-w-[960px] px-6 py-16 md:px-10 md:py-24">
+      <div>
       <p className="text-[0.72rem] tracking-[0.28em] text-muted uppercase">{t('kicker')}</p>
       <h1 className="mt-3 text-5xl font-medium md:text-7xl">{t('title')}.</h1>
       <p className="mt-6 max-w-2xl text-lg text-muted">{t('lead')}</p>
@@ -61,6 +63,7 @@ export default async function LocationsPage({ params }: Props) {
         ))}
       </div>
       <p className="mt-10 text-sm text-muted">{t('note')}</p>
-    </section>
+      </div>
+    </DamaskFrame>
   );
 }
